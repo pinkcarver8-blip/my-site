@@ -102,3 +102,70 @@ h2 {
   color: #9a92b0;
   font-size: 0.9rem;
 }
+
+/* 다크모드 토글 버튼 */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  border: 2px solid #f0e3f7;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(201, 184, 240, 0.4);
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* 다크모드 */
+body,
+.card,
+.footer,
+.theme-toggle {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] body {
+  color: #e6e1f2;
+  background: #17141f;
+}
+
+[data-theme="dark"] .header {
+  color: #f3eefc;
+  background: linear-gradient(135deg, #4a2c4f, #5a3f3a);
+}
+
+[data-theme="dark"] h2 {
+  border-bottom-color: #7b66b3;
+}
+
+[data-theme="dark"] .menu a:hover {
+  border-bottom-color: #9d86d6;
+}
+
+[data-theme="dark"] .card {
+  background: #231f2e;
+  border-color: #3a3350;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .footer {
+  color: #8f87a8;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #231f2e;
+  border-color: #3a3350;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
